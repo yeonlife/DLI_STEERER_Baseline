@@ -1,4 +1,4 @@
-# STEERER for Object Counting and Localizaition Baseline (ICCV 2023)
+# STEERER for Object Counting Baseline (ICCV 2023)
 ## Introduction
 This is the official PyTorch implementation of paper: [**STEERER: Resolving Scale Variations for Counting and Localization via Selective Inheritance Learning**](https://arxiv.org/abs/2308.10468), which effectively addressed the issue of scale variations for object counting and localizaioion, demonstrating the state-of-arts counting and localizaiton performance for different catagories, such as crowd,vehicle, crops and trees ![framework](./figures/framework.png)
 
@@ -63,16 +63,15 @@ sh ! python tools/train_cc.py --cfg=configs/QNRF_final.py --launcher="pytorch"
 
 ## Reproduce Counting and Localization Performance
 
-|            | Dataset     |  MAE/MSE |   F1-m./Pre./Rec. (%) | Pretraied Model | Dataset |
-|------------|-------- |-------|-------|-------|------|
-| This Repo      |  UCF-QNRF   | 77.8/138.0 |75.6/79.7/72.0| [weights](https://pjlab-my.sharepoint.cn/:u:/g/personal/hantao_dispatch_pjlab_org_cn/EfE8YRRrAYVBj7HbkC78yPYBPjLURl1ltKlihKhTI1Kl4g?e=yvrPDb)| [Dataset](https://pjlab-my.sharepoint.cn/:u:/g/personal/hantao_dispatch_pjlab_org_cn/Ef9E9oVtjyBEld_RYpPtqFUBfTBSy6ZgT0rqUhOMgC-X9A?e=WNn9aM)|-||
+|            |      Dataset     |  MAE/MSE  | Dataset | Weight |
+|------------|-------- |-------|-------|------|
+| This Repo      |  UCF-QNRF   | 82.89/137.66 | [Dataset](https://pjlab-my.sharepoint.cn/:u:/g/personal/hantao_dispatch_pjlab_org_cn/Ef9E9oVtjyBEld_RYpPtqFUBfTBSy6ZgT0rqUhOMgC-X9A?e=WNn9aM)|Ep_471_mae_81.09296779289932_mse_134.13431722945182.pth||
 <!-- # References
 1. Acquisition of Localization Confidence for Accurate Object Detection, ECCV, 2018.
 2. Very Deep Convolutional Networks for Large-scale Image Recognition, arXiv, 2014.
 3. Feature Pyramid Networks for Object Detection, CVPR, 2017.  -->
 
 # Citation
-If you find this project is useful for your research, please cite:
 
 ```
 @article{haniccvsteerer,
@@ -84,4 +83,4 @@ If you find this project is useful for your research, please cite:
 ```
 
 # Acknowledgement
-The released PyTorch training script borrows some codes from the [HRNet](https://github.com/HRNet/HRNet-Semantic-Segmentation) and [MMCV](https://github.com/open-mmlab/mmcv) repositories. If you think this repo is helpful for your research, please consider cite them. 
+The released PyTorch training script borrows some codes from the [HRNet](https://github.com/HRNet/HRNet-Semantic-Segmentation) and [MMCV](https://github.com/open-mmlab/mmcv) repositories.
