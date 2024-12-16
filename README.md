@@ -2,11 +2,6 @@
 ## Introduction
 This is the official PyTorch implementation of paper: [**STEERER: Resolving Scale Variations for Counting and Localization via Selective Inheritance Learning**](https://arxiv.org/abs/2308.10468), which effectively addressed the issue of scale variations for object counting and localizaioion, demonstrating the state-of-arts counting and localizaiton performance for different catagories, such as crowd,vehicle, crops and trees ![framework](./figures/framework.png). 
 
-# Catalog
-- [x] Training and Testing Code (18/08/2023)
-- [x] Pretrained models for SHHB, JHU, TRANSCOS, MTC, TREE (30/10/2023)
-- [x] Pretrained models for NWPU, QNRF (coming soon)
-
 
 # Getting started 
 
@@ -64,7 +59,7 @@ sh ! python tools/train_cc.py --cfg=configs/QNRF_final.py --launcher="pytorch"
 
 # Run this cell to test STEERE model in STEERER_train.ipynb file
 ! python tools/test_loc.py --cfg=configs/QNRF_final.py --checkpoint="/content/drive/MyDrive/STEERER/STEERER/exp/QNRF/MocHRBackbone_hrnet48/QNRF_final_2024-12-09-19-22/Ep_471_mae_81.09296779289932_mse_134.13431722945182.pth" --launcher="pytorch"
-
+```
 
 ## Reproduce Counting and Localization Performance
 
