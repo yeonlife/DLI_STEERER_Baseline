@@ -27,7 +27,7 @@ network = dict(
 
 dataset = dict(
     name='QNRF',
-    root='../ProcessedData/QNRF/',
+    root='../ProcessedData/',
     test_set='test.txt', #'train_val.txt',
     train_set='train.txt',
     loc_gt = 'test_gt_loc.txt',

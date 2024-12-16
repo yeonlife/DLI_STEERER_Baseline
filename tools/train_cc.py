@@ -113,7 +113,7 @@ def main():
         'valid_global_steps': 0,
     }
 
-    logger.info('GPU idx:'+os.environ['CUDA_VISIBLE_DEVICES'])
+    logger.info('GPU idx:'+os.environ.get('CUDA_VISIBLE_DEVICES', '0'))
     gpus = config.gpus
     distributed = torch.cuda.device_count() > 1
     if distributed:

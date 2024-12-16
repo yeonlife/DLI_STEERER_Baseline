@@ -109,7 +109,7 @@ def copy_cur_env(work_dir, dst_dir, exception):
         dst_file = os.path.join(dst_dir,filename)
 
         if os.path.isdir(file) and filename not in exception:
-            shutil.copytree(file, dst_file)
+            shutil.copytree(file, dst_file, dirs_exist_ok=True)
         elif os.path.isfile(file):
             shutil.copyfile(file,dst_file)
 def create_logger(cfg, cfg_name, phase='train'):

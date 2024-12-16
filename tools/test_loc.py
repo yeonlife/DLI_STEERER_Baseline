@@ -87,7 +87,7 @@ def main():
     logger.info(pprint.pformat(args))
     logger.info(pprint.pformat(config))
     
-    logger.info('GPU idx:'+os.environ['CUDA_VISIBLE_DEVICES'])
+    logger.info('GPU idx:'+os.environ.get('CUDA_VISIBLE_DEVICES', '0'))
     gpus = config.gpus
     distributed = torch.cuda.device_count() > 1
     if distributed:
