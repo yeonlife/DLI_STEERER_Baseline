@@ -57,7 +57,7 @@ we provide simplify script to run baseline model with A100 GPU in STEERER_train.
 # Run this cell to train STEERER model in STEERER_train.ipynb file
 sh ! python tools/train_cc.py --cfg=configs/QNRF_final.py --launcher="pytorch"
 
-# Run this cell to test STEERE model in STEERER_train.ipynb file
+# Run this cell to test STEERER model in STEERER_train.ipynb file
 ! python tools/test_loc.py --cfg=configs/QNRF_final.py --checkpoint="exp/QNRF/MocHRBackbone_hrnet48/QNRF_final_2024-12-09-19-22/Ep_471_mae_81.09296779289932_mse_134.13431722945182.pth" --launcher="pytorch"
 ```
 
