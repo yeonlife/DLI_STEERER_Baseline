@@ -58,14 +58,15 @@ we provide simplify script to run baseline model with A100 GPU in STEERER_train.
 sh ! python tools/train_cc.py --cfg=configs/QNRF_final.py --launcher="pytorch"
 
 # Run this cell to test STEERER model in STEERER_train.ipynb file
-! python tools/test_loc.py --cfg=configs/QNRF_final.py --checkpoint="exp/QNRF/MocHRBackbone_hrnet48/QNRF_final_2024-12-09-19-22/Ep_471_mae_81.09296779289932_mse_134.13431722945182.pth" --launcher="pytorch"
+! python tools/test_loc.py --cfg=configs/QNRF_final.py --checkpoint="exp/QNRF/MobileBackbone_mobile_large/QNRF_final_2024-12-17-15-14/Ep_427_mae_84.36152942451888_mse_150.99217291674904.pth" --launcher="pytorch"
 ```
 
 ## Reproduce Counting and Localization Performance
 
-|            |      Dataset     |  MAE/MSE  | Dataset | Weight |
+|     Dataset     |     Method     |  MAE/MSE  | Dataset | Weight |
 |------------|-------- |-------|-------|------|
-| This Repo      |  UCF-QNRF   | 82.89/137.66 | [Dataset](https://pjlab-my.sharepoint.cn/:u:/g/personal/hantao_dispatch_pjlab_org_cn/Ef9E9oVtjyBEld_RYpPtqFUBfTBSy6ZgT0rqUhOMgC-X9A?e=WNn9aM)|Ep_471_mae_81.09296779289932_mse_134.13431722945182.pth||
+| UCF-QNRF  |  STEERER   | 82.89/137.66 | [Dataset](https://pjlab-my.sharepoint.cn/:u:/g/personal/hantao_dispatch_pjlab_org_cn/Ef9E9oVtjyBEld_RYpPtqFUBfTBSy6ZgT0rqUhOMgC-X9A?e=WNn9aM)|Ep_471_mae_81.09296779289932_mse_134.13431722945182.pth|
+| UCF-QNRF  |  STEERER (MobileNetV3 large)   | 85.73/152.78 | [Dataset](https://pjlab-my.sharepoint.cn/:u:/g/personal/hantao_dispatch_pjlab_org_cn/Ef9E9oVtjyBEld_RYpPtqFUBfTBSy6ZgT0rqUhOMgC-X9A?e=WNn9aM)|Ep_427_mae_84.36152942451888_mse_150.99217291674904.pth||
 <!-- # References
 1. Acquisition of Localization Confidence for Accurate Object Detection, ECCV, 2018.
 2. Very Deep Convolutional Networks for Large-scale Image Recognition, arXiv, 2014.
